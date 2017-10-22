@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .menu{
+            position: relative;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            width: 150px;
+        }
+        li{
+            line-height: 30px;
+            height: 30px;
+            background: linear-gradient(90deg,#d9f1f1 94%,transparent 6%);
+            border-radius: 5px;
+        }
+        li>div{
+            width: 400px;
+            height: 210px;
+            position: absolute;
+            top: 0;
+            left: 140px;
+            visibility: hidden;
+            opacity:0.1;
+            border-radius: 3px;
+        }
+        li:hover div{
+            left: 149px;
+            visibility: visible;
+            transition:opacity .3s linear,left .3s linear;
+            opacity:1;
+        }
+        .box1{
+            background: #ff0c0b;
+        }
+        .box2{
+            background: orange;
+        }
+        .box3{
+            background: #ff3d58;
+        }
+        .box4{
+            background: green;
+        }
+        .box5{
+            background: #08ffea;
+        }
+        .box6{
+            background: blue;
+        }
+        .box7{
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <ul>
+        <li>赤
+            <div class="box1">赤</div>
+        </li>
+        <li>橙
+            <div class="box2">橙</div>
+        </li>
+        <li>红
+            <div class="box3">红</div>
+        </li>
+        <li>绿
+            <div class="box4">绿</div>
+        </li>
+        <li>青
+            <div class="box5">青</div>
+        </li>
+        <li>蓝
+            <div class="box6">蓝</div>
+        </li>
+        <li>紫
+            <div class="box7">紫</div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

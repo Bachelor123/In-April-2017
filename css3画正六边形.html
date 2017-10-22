@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*<!--注意比例关系，长是宽的2/1.732倍以上-->*/
+        div{
+            width:200px;
+            height: 170px;
+            overflow: hidden;
+        }
+        .a{
+            transform:rotate(-60deg);
+            /*border:1px solid yellow;*/
+            margin:200px auto 0;
+        }
+        .b{
+            transform:rotate(120deg);
+            /*border:1px solid pink;*/
+        }
+        .c{
+            transform:rotate(-60deg);
+            background: linear-gradient(135deg,#ff3d58 0%,aqua 100%);
+            /*border:1px solid red;*/
+        }
+    </style>
+</head>
+<body>
+<div class="a">
+    <div class="b">
+        <div class="c"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>Backface</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 600px;
+            display: flex;
+            justify-content:space-around;
+            align-items:center;
+            background: aqua;
+        }
+        .wrap{
+            width: 400px;
+            height: 220px;
+            background:url("img/230192-106.jpg")center no-repeat;
+            background-size:100% 100%;
+            border-radius: 5px;
+            perspective: 1500px;
+        }
+        .inner{
+            width: 400px;
+            height: 220px;
+            background: rgba(196, 139, 209, 0.53);
+            text-align: center;
+            line-height: 220px;
+            font-size: 40px;
+            backface-visibility:hidden;
+            transform:rotateY(-180deg);
+            transition:all 1.5s;
+            color: #FFFFFF;
+            transform-origin: 0 0;
+        }
+        .wrap:hover .inner{
+            transform: rotateY(0deg);
+        }
+        
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="inner">pretty girl</div>
+</div>
+</body>
+</html>

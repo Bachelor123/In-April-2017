@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button</title>
+</head>
+<body>
+<style>
+    #box1{
+        width: 200px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        font-size: 35px;
+        color: #ffffff;
+        margin: 100px auto 0;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        border-radius: 40px;
+        background: linear-gradient(180deg, #48c3ff 10%, #4e8fff 90%);
+        box-shadow:0 15px 0 #3a70ff;
+        position: relative;
+        top: 0;
+        transition:all .3s;
+    }
+    #box1:active{
+        top: 10px;
+        box-shadow: 0 5px 0 #3a70ff;
+        text-shadow:0 1px 1px  rgba(255, 255, 255, 0.44);
+        color: #0e6bf4;
+    }
+
+    .box2{
+        width: 200px;
+        height: 70px;
+        background: #3a88f4;
+        margin: 100px auto 0;
+        box-shadow: 0 15px 5px #236af4;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        border-radius: 40px;
+        text-align: center;
+        line-height: 70px;
+        color: #FFFFFF;
+        font-size: 35px;
+        position: relative;
+        top: 0;
+        transition:all .3s;
+        cursor: pointer;
+        user-select: none;
+    }
+    .box2:active{
+        top: 10px;
+        box-shadow: 0 5px 5px #236af4;
+        text-shadow:0 1px 1px  rgba(255, 255, 255, 0.44);
+        color: #0e6bf4;
+    }
+</style>
+<script>
+    window.onload=function(){
+        var oBtn=document.getElementById('box1');
+        var num=0;
+        oBtn.onclick=function a(){
+            alert('you are beautiful! ');
+            num++;
+        }
+    }
+</script>
+<div id="box1" >Click me</div>
+<div class="box2" >css 按钮</div>
+</body>
+</html>

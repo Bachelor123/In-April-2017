@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: url("img/92264-106.jpg") no-repeat;
+            background-size: cover;
+        }
+        nav{
+            width: 120px;
+            line-height: 40px;
+            height: 40px;
+            overflow: hidden;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            transition:left .2s ease-out;
+            position: relative;
+            left: 0;
+            cursor: pointer;
+        }
+        nav:hover{
+            overflow: visible;
+        }
+        nav:hover ul{
+            left: 5px;
+        }
+        p{
+            margin: 0;
+            text-indent: 20px;
+        }
+        li{
+            border:1px solid #bcbcbc;
+            background: #FFFFFF;
+            border-radius: 10px;
+            text-indent: 20px;
+            position: relative;
+            transition:left .3s linear;
+            left: 0;
+        }
+        li:hover{
+            left: 10px;
+            border-color:deepskyblue;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <p>下拉选框</p>
+        <ul>
+            <li>选项1</li>
+            <li>选项2</li>
+            <li>选项3</li>
+            <li>选项4</li>
+            <li>选项5</li>
+            <li>选项6</li>
+        </ul>
+    </nav>
+</header>
+<div class="banner"></div>
+</body>
+</html>

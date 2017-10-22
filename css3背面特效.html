@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .wrap{
+            width: 300px;
+            height: 180px;
+            background: url("img/a (2).png") center center no-repeat;
+            background-size: 100% 100%;
+            margin: 200px auto;
+            position: relative;
+            perspective: 500px;
+            /*这种动画一定要记得加一个视点，要不然你看不出动画的真实效果，
+            不信你就把视点这句话注释掉，看看效果怎么样*/
+            /*transform-style:preserve-3d ;*/
+            /*这种情况之下不能添加3d的转换效果，加上此效果，变成立体图之后，
+            背景图或者没转的div会遮住旋转的效果，使后面的效果不能完全显现出来*/        }
+        .wrap:hover .box{
+            transform:rotateY(0deg);
+        }
+        /*.inner{*/
+        /*width: 300px;*/
+        /*height: 180px;*/
+        /*position: relative;*/
+        /*border: 2px solid deepskyblue;*/
+        /*/!*margin: 200px auto;*!/*/
+        /*}*/
+        .box{
+            width: 300px;
+            height: 180px;
+            position: absolute;
+            background-color:rgba(0,0,0,.4) ;
+            text-align: center;
+            line-height: 180px;
+            font-size: 50px;
+            color: #ffffff;
+            transform: rotateY(-180deg);
+            backface-visibility: hidden;
+            transition:all 2s;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="inner">
+        <div class="box">git bash</div>
+    </div>
+</div>
+</body>
+</html>

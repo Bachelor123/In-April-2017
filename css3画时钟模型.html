@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 400px;
+            margin: 70px 0 0 100px;
+            border: 5px solid deepskyblue;
+            perspective: 3700px;
+        }
+
+        .box:hover .case {
+            transform: rotateX(-395deg) rotateY(-20deg);
+        }
+
+        .case {
+            height: 80px;
+            width: 200px;
+            margin: 150px auto;
+            text-align: center;
+            position: relative;
+            transform-origin: 50% 50%;
+            transform: rotateX(-35deg) rotateY(20deg);
+            transform-style: preserve-3d;
+            transition: all 2s;
+            /*background: rgba(0, 0, 0, 0.32);*/
+        }
+
+        .case > div {
+            width: 200px;
+            height: 80px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .case .c, .case .d {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+        }
+
+        .a {
+            transform: translateZ(-40px);
+            background-color: rgba(207, 29, 255, 0.5);
+        }
+
+        .b {
+            transform: translateZ(40px);
+            background-color: rgba(28, 27, 255, 0.5);
+        }
+
+        /*c、d为什么是移40px和60px，是因为定位的时候他们比父元素小，定位在父元素的左上角*/
+        .c {
+            transform: rotateY(-90deg) translateZ(40px);
+            background-color: rgba(31, 237, 255, 0.5);
+        }
+
+        .d {
+            transform: rotateY(90deg) translateZ(160px);
+            background-color: rgba(255, 234, 10, 0.5);
+        }
+
+        .e {
+            transform: rotateX(-90deg) translateZ(40px);
+            background-color: rgba(22, 255, 9, 0.5);
+        }
+
+        .f {
+            transform: rotateX(90deg) translateZ(40px);
+            background-color: rgba(255, 59, 0, 0.5);
+        }
+
+        .timer {
+            line-height: 80px;
+        }
+
+        .timer > p {
+            font-size: 25px;
+            float: left;
+            font-weight: bold;
+            margin: 0 10px 0 12px;
+            user-select: none;
+        }
+
+        .t-minute, .t-second {
+            float: left;
+            width: 35px;
+            height: 37px;
+            background: #440106;
+            color: #f90013;
+            font-size: 24px;
+            font-family: Arial;
+            font-weight: 700;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 37px;
+            margin-top: 23px;
+            user-select: none;
+        }
+
+        .split {
+            float: left;
+            margin: 22px 4px 0;
+            width: 4px;
+            position: relative;
+        }
+
+        .split > span {
+            color: #440106;
+            font-size: 36px;
+            position: absolute;
+            top: -22px;
+            left: -2px;
+            user-select: none;
+        }
+
+    </style>
+</head>
+<body>
+<body>
+<div class="box">
+    <div class="case">
+        <div class="a"></div>
+        <div class="b">
+            <div class="timer">
+                <p>Timer:</p>
+                <div class="t-minute">
+                    <span class="t-txt">01</span>
+                </div>
+                <div class="split">
+                    <span>:</span>
+                </div>
+                <div class="t-second">
+                    <span class="t-txt">00</span>
+                </div>
+            </div>
+        </div>
+        <div class="c"></div>
+        <div class="d"></div>
+        <div class="e"></div>
+        <div class="f"></div>
+    </div>
+</div>
+</body>
+</body>
+</html>

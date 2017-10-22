@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Border</title>
+    <style>
+        h3{
+            margin: 0;
+        }
+        .box1{
+            width:0;
+            height: 0;
+            border-top: 60px solid red;
+            border-right:60px solid aqua;
+        }
+        .box2{
+            width:0;
+            height:0;
+            border-top:80px solid green;
+            border-right:100px solid blue;
+            border-left:40px solid pink;
+            border-bottom:60px solid yellow;
+        }
+        .box3{
+            width: 200px;
+            height: 150px;
+            border:1px solid green;
+            position: relative;
+            margin-top: 40px;
+        }
+        .box3:before{
+            content: '';
+            width:0;
+            height: 0;
+            border:15px solid transparent;
+            border-bottom-color: green;
+            position: absolute;
+            top: -30px;
+            left:50%;
+            transform:translate(-50%,0);
+        }
+        .box3:after{
+            content: '';
+            width:0;
+            height:0;
+            border:15px solid transparent;
+            border-bottom-color: white;
+            position: absolute;
+            top: -28px;
+            left:50%;
+            transform:translate(-50%,0);
+
+        }
+    </style>
+</head>
+<body>
+<h3>两个边框能画一个正方形</h3>
+<div class="box1"></div>
+<h3>画不规则三角形</h3>
+<div class="box2"></div>
+<h3>简单应用</h3>
+<div class="box3"></div>
+</body>
+</html>
